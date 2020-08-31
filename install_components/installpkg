@@ -146,7 +146,7 @@ function install_package {
     check_package
     if [ $? == 0 ] ; then
         #Installing Package
-        sudo installer -pkg "${item2add}" -target /
+        sudo installer -pkg "${item2add}" -target / -allowUntrusted
 		if [ $? != 0 ] ; then
 			((num_installer_errors++))
 			echo "    WARNING! : Errors were encountered during installation of package : ${item2add}"
